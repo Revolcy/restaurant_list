@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          // 🔍 Search Bar
+          // Search Bar
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
-          // 📋 Konten
+          // Konten
           Expanded(
             child: searchProv.lastQuery.isNotEmpty
                 ? _buildSearch(searchProv)

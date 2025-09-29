@@ -17,9 +17,9 @@ class ReminderProvider extends ChangeNotifier {
 
   Future<void> toggleReminder() async {
     if (_isReminderActive) {
-      await _notificationHelper.cancelAll(); // ✅ ganti ini
+      await _notificationHelper.cancelAll();
     } else {
-      await _notificationHelper.scheduleDailyReminder(); // ✅ ini sudah benar
+      await _notificationHelper.scheduleDailyReminder();
     }
     _isReminderActive = !_isReminderActive;
     notifyListeners();
@@ -30,6 +30,6 @@ class ReminderProvider extends ChangeNotifier {
       id: 999,
       title: "Test Notif",
       body: "Notif langsung muncul ✅",
-    ); // ✅ ganti
+    );
   }
 }

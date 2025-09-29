@@ -15,7 +15,7 @@ class NotificationHelper {
     await flutterLocalNotificationsPlugin.initialize(initSettings);
   }
 
-  // 🔔 Notif langsung
+  // Notif langsung
   Future<void> showNotification(
       {int id = 0, String? title, String? body}) async {
     const androidDetails = AndroidNotificationDetails(
@@ -36,7 +36,7 @@ class NotificationHelper {
     );
   }
 
-  // ⏰ Daily reminder jam 11 siang
+  // Daily reminder jam 11 siang
   Future<void> scheduleDailyReminder({
     int id = 1,
     String title = "Daily Reminder",
@@ -61,7 +61,7 @@ class NotificationHelper {
     );
   }
 
-  // 📅 Hitung kapan jam 11 berikutnya
+  // Hitung kapan jam 11 berikutnya
   tz.TZDateTime _nextInstanceOfElevenAM() {
     final now = tz.TZDateTime.now(tz.local);
     var scheduled =
